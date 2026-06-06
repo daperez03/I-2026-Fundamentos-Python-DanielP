@@ -1,3 +1,13 @@
+def retirar_dinero(saldo):
+    cantidad = int(input("Ingrese la cantidad a retirar: "))
+    if cantidad > saldo:
+        print("No tiene suficiente saldo")
+        return saldo
+    else:
+        saldo =  saldo - cantidad
+        print(f"Ha retirado: {cantidad}")
+        return saldo
+
 print("Cajero automático")
 print("Bienvenido al cajero automático")
 saldo = 0
@@ -11,12 +21,7 @@ while True:
     if opcion == 1:
         print(f"Su saldo es: {saldo}")
     elif opcion == 2:
-        cantidad = int(input("Ingrese la cantidad a retirar: "))
-        if cantidad > saldo:
-            print("No tiene suficiente saldo")
-        else:
-            saldo =  saldo - cantidad
-            print(f"Ha retirado: {cantidad}")
+        saldo = retirar_dinero(saldo)
     elif opcion == 3:
         cantidad = int(input("Ingrese la cantidad a depositar: "))
         saldo = saldo + cantidad

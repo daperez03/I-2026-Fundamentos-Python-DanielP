@@ -1,0 +1,1 @@
+archivo = open("C:\\Users\danie\OneDrive - Universidad de Costa Rica\Desktop\I-2026-Fundamentos-Python-DanielP\Clase 06\Actividad.txt, "w")
